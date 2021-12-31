@@ -29,7 +29,7 @@ export class PostCreateComponent implements OnInit {
         if (this.postId) {
           this.postsService.getPost(this.postId).subscribe(postData => {
             this.isLoading = false;
-            this.post = {id: postData._id, title: postData.title, content: postData.content};
+            this.post = {id: postData._id, title: postData.title, content: postData.content, creator: postData.creator};
           });
         }
       } else {
